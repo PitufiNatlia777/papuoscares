@@ -1,10 +1,14 @@
 //PAPUOSCARES
 Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine("==============================");
-Console.WriteLine("   Premios Papuoscares   ");
-Console.WriteLine("===============================\n");
-string titulo = "Premios Papuoscares";
-int anchoConsola = Console.WindowWidth; // O la longitud fija que desees, ej. 34
-
-// Centra el texto calculando los espacios necesarios a la izquierda
+string titulo = "================================";
+string titulo1 = "Premios Papuoscares";
+string titulo2 = "================================";
+string titulo3 = "Presentado por Adri y sus Papus";
+int anchoConsola = Console.WindowWidth; 
 Console.WriteLine(titulo.PadLeft((anchoConsola + titulo.Length) / 2));
+Console.WriteLine(titulo1.PadLeft((anchoConsola + titulo1.Length) / 2));
+Console.WriteLine(titulo2.PadLeft((anchoConsola + titulo2.Length) / 2));
+Console.WriteLine(titulo3.PadLeft((anchoConsola + titulo3.Length) / 2));
+
+Console.ForegroundColor = ConsoleColor.White;
+Console.WriteLine("\n¡Bienvenidos a la sexagésima séptima edición de los Premios Papuoscares!\n");
