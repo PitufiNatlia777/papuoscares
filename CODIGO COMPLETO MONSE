@@ -1,4 +1,5 @@
 //PAPUOSCARES
+
 Console.ForegroundColor = ConsoleColor.Yellow;
 string titulo = "================================";
 string titulo1 = "Premios Papuoscares";
@@ -11,4 +12,6 @@ Console.WriteLine(titulo2.PadLeft((anchoConsola + titulo2.Length) / 2));
 Console.WriteLine(titulo3.PadLeft((anchoConsola + titulo3.Length) / 2));
 
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine("\n¡Bienvenidos a la sexagésima séptima edición de los Premios Papuoscares!\n");
+string mensaje = "¡Bienvenidos a la sexagésima séptima edición de los Premios Papuoscares!";
+Console.WriteLine($"\n{mensaje.PadLeft((anchoConsola + mensaje.Length) / 2)}\n");
+
