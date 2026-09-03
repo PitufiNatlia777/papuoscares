@@ -3,3 +3,8 @@ Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("==============================");
 Console.WriteLine("   Premios Papuoscares   ");
 Console.WriteLine("===============================\n");
+string titulo = "Premios Papuoscares";
+int anchoConsola = Console.WindowWidth; // O la longitud fija que desees, ej. 34
+
+// Centra el texto calculando los espacios necesarios a la izquierda
+Console.WriteLine(titulo.PadLeft((anchoConsola + titulo.Length) / 2));
