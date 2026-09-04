@@ -1,17 +1,27 @@
 //PAPUOSCARES
 
-Console.ForegroundColor = ConsoleColor.Yellow;
-string titulo = "================================";
+ConsoleColor[] colores = { ConsoleColor.Yellow, ConsoleColor.Red, ConsoleColor.Green, ConsoleColor.Cyan };
+int anchoConsola = Console.WindowWidth; // aqui solo estoy añadiendo los papucolores que quiero que roten papu equipo
+
+string titulo  = "================================";
 string titulo1 = "Premios Papuoscares";
 string titulo2 = "================================";
 string titulo3 = "Presentado por Adri y sus Papus";
-int anchoConsola = Console.WindowWidth; 
-Console.WriteLine(titulo.PadLeft((anchoConsola + titulo.Length) / 2));
-Console.WriteLine(titulo1.PadLeft((anchoConsola + titulo1.Length) / 2));
-Console.WriteLine(titulo2.PadLeft((anchoConsola + titulo2.Length) / 2));
-Console.WriteLine(titulo3.PadLeft((anchoConsola + titulo3.Length) / 2));
-
-Console.ForegroundColor = ConsoleColor.White;
 string mensaje = "¡Bienvenidos a la sexagésima séptima edición de los Premios Papuoscares!";
-Console.WriteLine($"\n{mensaje.PadLeft((anchoConsola + mensaje.Length) / 2)}\n");
 
+for (int i = 0; i < 20; i++) // 20 vueltas = 20 segundos
+{
+    Console.Clear();                                // borra lo anterior
+    Console.ForegroundColor = colores[i % colores.Length]; // el % hace que los colores se repitan en bucle
+
+    Console.WriteLine(titulo.PadLeft((anchoConsola + titulo.Length) / 2));
+    Console.WriteLine(titulo1.PadLeft((anchoConsola + titulo1.Length) / 2));
+    Console.WriteLine(titulo2.PadLeft((anchoConsola + titulo2.Length) / 2));
+    Console.WriteLine(titulo3.PadLeft((anchoConsola + titulo3.Length) / 2));
+
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine($"\n{mensaje.PadLeft((anchoConsola + mensaje.Length) / 2)}\n");
+
+    System.Threading.Thread.Sleep(1000);             // espera 1 segundo ( si consideran que es muy rapido subanle y vayan probando)
+}
+Console.ResetColor();
