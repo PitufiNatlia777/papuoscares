@@ -3,7 +3,7 @@
 ConsoleColor[] colores = { ConsoleColor.Yellow, ConsoleColor.Red, ConsoleColor.Green, ConsoleColor.Cyan };
 int anchoConsola = Console.WindowWidth; // aqui solo estoy añadiendo los papucolores que quiero que roten papu equipo
 
-string titulo  = "================================";
+string titulo  = "================================"; //hice el titulo un string para poder rotar los colores mas facil y centrarlos sin poner espacios D:
 string titulo1 = "Premios Papuoscares";
 string titulo2 = "================================";
 string titulo3 = "Presentado por Adri y sus Papus";
