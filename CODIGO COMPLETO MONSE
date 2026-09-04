@@ -25,3 +25,24 @@ for (int i = 0; i < 20; i++) // 20 vueltas = 20 segundos
     System.Threading.Thread.Sleep(1000);             // espera 1 segundo ( si consideran que es muy rapido subanle y vayan probando)
 }
 Console.ResetColor();
+
+// Crea un objeto del nuevo formulario
+SegundaForm nuevaVentana = new SegundaForm();
+
+// Muestra la nueva ventana
+nuevaVentana.Show();
+
+// Oculta la ventana actual
+this.Hide();
+
+private void button1_Click(object sender, EventArgs e)
+{
+    // Crear una instancia de la segunda ventana
+    Form2 ventana2 = new Form2();
+    
+    // Mostrar la nueva ventana
+    ventana2.Show(); 
+    
+    // Opcional: Si quieres ocultar la ventana actual
+    // this.Hide();
+}
