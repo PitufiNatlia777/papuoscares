@@ -3,13 +3,13 @@
 ConsoleColor[] colores = { ConsoleColor.Yellow, ConsoleColor.Red, ConsoleColor.Green, ConsoleColor.Cyan };
 int anchoConsola = Console.WindowWidth; // aqui solo estoy añadiendo los papucolores que quiero que roten papu equipo
 
-string titulo  = "================================"; //hice el titulo un string para poder rotar los colores mas facil y centrarlos sin poner espacios D:
-string titulo1 = "Premios Papuoscares";
-string titulo2 = "================================";
+string titulo = "================================="; //hice el titulo un string para poder rotar los colores mas facil y centrarlos sin poner espacios D:
+string titulo1 = "=      Premios Papuoscares      =";
+string titulo2 = "=================================";
 string titulo3 = "Presentado por Adri y sus Papus";
 string mensaje = "¡Bienvenidos a la sexagésima séptima edición de los Premios Papuoscares!";
 
-for (int i = 0; i < 20; i++) // 20 vueltas = 20 segundos
+for (int i = 0; i < 5; i++) // 20 vueltas = 20 segundos
 {
     Console.Clear();                                // borra lo anterior
     Console.ForegroundColor = colores[i % colores.Length]; // el % hace que los colores se repitan en bucle
@@ -22,7 +22,48 @@ for (int i = 0; i < 20; i++) // 20 vueltas = 20 segundos
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine($"\n{mensaje.PadLeft((anchoConsola + mensaje.Length) / 2)}\n");
 
-    System.Threading.Thread.Sleep(1000);             // espera 1 segundo ( si consideran que es muy rapido subanle y vayan probando)
+    System.Threading.Thread.Sleep(400);             // espera 1 segundo ( si consideran que es muy rapido subanle y vayan probando)
 }
 Console.ResetColor();
 
+for (int nominados = 1; nominados <= 5; nominados++)// Nos dimos cuenta que definimos variables en un for y esto nos llevo al problema de que no podiamos definirlas fuera de el, por lo tanto tuvimos que hacer un for MUUUY GRANDE D:
+{
+    Console.WriteLine("\nIngresa el nombre del nominado");
+    string nominado = Console.ReadLine();
+    Console.WriteLine($"Tu primer pelicula nominada es: {nominado} \n");
+
+    Console.WriteLine("\nIngresa el nombre del nominado");
+    string nominado1 = Console.ReadLine();
+    Console.WriteLine($"Tu segunda pelicula nominada es: {nominado1} \n");
+
+    Console.WriteLine("\nIngresa el nombre del nominado");
+    string nominado2 = Console.ReadLine();
+    Console.WriteLine($"Tu tercer pelicula nominada es: {nominado2} \n");
+
+    Console.WriteLine("\nIngresa el nombre del nominado");
+    string nominado3 = Console.ReadLine();
+    Console.WriteLine($"Tu cuarta pelicula nominada es: {nominado3} \n");
+
+    Console.WriteLine("\nIngresa el nombre del nominado");
+    string nominado4 = Console.ReadLine();
+   
+    string titulo6 = "TUS PAPUNOMINADOS ESTAN LISTOS!!";
+    string mensaje1 = "ES HORA DE PAPU VOTAR!!";
+
+    for (int i = 0; i < 5; i++) // 20 vueltas = 20 segundos
+    {
+        Console.Clear();                                // borra lo anterior
+        Console.ForegroundColor = colores[i % colores.Length]; // el % hace que los colores se repitan en bucle
+
+        Console.WriteLine(titulo.PadLeft((anchoConsola + titulo.Length) / 2));
+        Console.WriteLine(titulo1.PadLeft((anchoConsola + titulo1.Length) / 2));
+        Console.WriteLine(titulo2.PadLeft((anchoConsola + titulo2.Length) / 2));
+        Console.WriteLine(titulo6.PadLeft((anchoConsola + titulo6.Length) / 2));
+
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine($"\n{mensaje1.PadLeft((anchoConsola + mensaje1.Length) / 2)}\n");
+
+        System.Threading.Thread.Sleep(400);             // espera 1 segundo ( si consideran que es muy rapido subanle y vayan probando)
+    }
+    Console.ResetColor();
+}
